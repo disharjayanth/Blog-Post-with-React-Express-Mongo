@@ -1,0 +1,569 @@
+
+/*WHOLE HTML BODY*/
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/*CSS GRID LAYOUT*/
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/*NAVBAR STYLING STARTS*/
+
+
+
+.nav-links{
+  display: flex;
+  position: fixed;
+  left: 80%;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  min-width: 20em;
+  z-index: 1000;
+}
+
+.nav-links li{
+  background-color: rgb(255, 102, 0);
+  list-style: none;
+  padding: 10px 12px;
+}
+
+.nav-links li:hover {
+  background-color: rgb(0, 174, 255);
+}
+
+@media (max-width: 1150px) {
+ .nav-links {
+   display: flex;
+   position: fixed;
+   flex-direction: column;
+   top:0.5%;
+   left: 85%;
+ }
+
+ .nav-links li{
+  padding: .25em;
+  font-size: .85em;
+}
+}
+
+/*NAVBAR STYLING ENDS*/
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* BLOG LIST LOADING STARTS */ 
+
+  .loading {
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+    margin: 16em auto;
+    
+  }
+
+
+/* BLOG LIST LOADING ENDS */ 
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/*BLOG LIST BOX STYLING STARTS*/
+
+
+.grid-container {
+  background-color: rgb(241, 241, 241);
+  padding: 1em;
+  margin: 0 auto;  
+  /* border: 1px solid blue */
+}
+
+.bloglist {
+  margin: 0 5%;
+  /* border: 1px solid blue */
+}
+
+.nav-home {
+  color: white;
+}
+
+.nav-blogs {
+  color: white;
+}
+
+.nav-newblog {
+  color: white;
+}
+
+.type-title{
+  color:rgb(0, 89, 255);
+  font-size: 3rem;
+  padding: 1% 0;
+}
+
+.bloglist-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(0.5em,17em));
+  /* grid-auto-rows: 12em; */
+  background-color: rgb(235, 235, 235);
+  padding: 2em 0;
+  grid-gap: 2em;
+  align-content: center;
+  justify-content: center;
+  /* border: solid 1px red; */
+}
+
+.list_item_blog {
+  min-height: 1em;
+  max-height: 15em;
+  /* min-width: 1em;
+  max-width: 15em; */
+  /* border-left: 1px solid black; */
+  background-color: white;
+  padding: 1em;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform .8s;
+}
+
+.list_item_blog:hover {
+  box-shadow: 4px 4px 4px 4px #888888;
+  /* box-shadow: 10px 10px 8px grey; */  
+  transform: scale(1.10);
+  overflow-y: scroll;
+}
+
+.blog_title {
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: capitalize;
+  text-align: left;
+  color: black;
+}
+
+.blog_time {
+  float: right;
+  font-size: 10px;
+  color: rgb(114, 114, 114);
+}
+
+.list_item_blog > p {
+  text-decoration: none;
+}
+
+.blog_description {
+  font-size: 13px;
+  color: rgb(83, 83, 83);
+  text-align: justify;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.blog_img {
+  max-width: 35%;
+  max-height: auto;    
+  float: left;
+  margin: 3px;
+  padding: 3px
+}
+
+/*BLOG LIST BOX STYLING ENDS */
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* BLOG-DETAIL STARTS*/
+
+
+.blogdetail-inside {
+  background-color:  rgb(231, 231, 231);
+  margin: 10px auto;
+  padding: 10px;
+  /* border: solid 1px black; */
+}
+
+.title {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 4rem;
+}
+
+.datetime {
+  text-align: right;
+  font-size: 0.75em;
+  color: rgb(90, 90, 90);
+}
+
+.type {
+  padding-left: 6px;
+  font-size: 0.75em;
+  color: rgb(107, 107, 107);
+  text-align: left;
+}
+
+.info {
+  white-space: pre-wrap;
+  font-size: 1.25em;
+  padding: 1em 18%;
+  text-align: justify;
+  background-color: rgb(231, 231, 231);
+}
+
+.img {
+    display: block;
+    margin: 0 auto; 
+    max-width: 60%;
+  max-height: auto; 
+}
+
+@media (max-width: 800px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .datetime{
+    font-size: .55em;
+  }
+
+  .type{
+    font-size: 0.55em;
+    padding-left: 0.2em;
+    padding-bottom: 0.2em;
+  }
+
+  .img{
+    max-width: 80%;
+    max-height: auto;
+  }
+
+  .info{
+    font-size: .8em;
+    padding: 1em 10%;
+  }
+
+  .type-control{
+    width: 1%;
+    background-color: blue;
+  }
+}
+
+
+/* BLOG FILER SELECT BOX STYLE STARTS  */
+
+.type-control{
+  width: 50em;
+}
+
+@media (max-width: 800px) {
+.type-control{
+  width: 50%;
+  background-color:rgb(0, 254, 216);
+}
+}
+
+/* BLOG FILER SELECT BOX STYLE ENDS  */
+
+
+/*BLOG-DETAIL ENDS*/
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+/*ADD-BLOG / NEW BLOG STARTS HERE*/
+
+
+.blogform {
+  margin: 0 auto;
+  width: 70%;
+  height: auto;
+  box-sizing: border-box;
+  background-color: rgb(135, 235, 160);
+  border-radius: 5px;
+  padding: 2.5% 5%;
+}
+
+/* .blogform-content {
+  border: 1px solid black;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 20px;
+} */
+
+.addNew-selectbox{
+   width: 95%;
+}
+
+#addNew-title,
+#addNew-img,
+#addNew-desp
+{
+   width: 90%;
+}
+
+/* input[type=text]{
+  width: 800px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+} */
+
+select {
+  padding: 12px;
+  width: 825px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 800px;
+  height: 500px;
+}
+
+label {
+  font-weight: bold;
+  text-transform: capitalize;
+  padding : 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: sandybrown;
+  color: royalblue;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(240, 136, 45);
+}
+
+.col-25 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+
+.addedBlog {
+  display: flex;
+  position: fixed;
+  top:0;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: rgb(255, 136, 0);
+  color: rgb(0, 0, 0);
+  width: 7%;
+  padding: 15px 10px;
+  border-radius: 8px;
+  margin: 1%;
+}
+
+/*ADD-BLOG / NEW BLOG ENDS HERE*/
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/*EDIT-BLOG START*/
+
+.formEditer{
+  margin: 0 auto;
+}
+
+.editForm {
+  margin: 0 auto;
+  padding: 0 18%;
+  /* border: 1px solid black; */
+}
+
+.editForm > input[type='text']{
+  min-width: 1em;
+  max-width: 80em;
+}
+
+.editForm > input[type='textarea']{
+  background-color: brown;
+}
+
+
+.editForm > input[type='submit'] {
+  margin: 10px;
+}
+
+.edit-btn {
+  border: none;
+  background-color: rgb(0, 153, 255);
+  color: black;
+  border-radius: 7px;
+  width: 100px;
+  height: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.edit-btn:hover{
+  border: none;
+  background-color: rgba(0, 110, 255, 0.829);
+}
+
+/*EDIT-BLOG ENDS*/
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+/* SIGNIN - SIGNUP STARTS  */
+
+#login {
+  /* border: 1px solid black; */
+  height: 100%;
+  background-color: rgb(235, 235, 235);
+}
+
+.imagecontainer >img{
+  margin: 5% 46%;
+  grid-area: bloglist;
+  height: 150px;
+  width: 150px;
+}
+
+.signin-container {
+  padding: 0 20% 12% 20%;
+  margin: 0 20%;
+}
+
+.signin-container > input[type='password'],input[type='text'] {
+ 
+  width: 90%;
+  margin: 8px 0;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.signin-container >button {
+  border: none;
+  background-color: rgb(12, 196, 12);
+  border-radius: 5px;
+  color:white;
+  margin: 10px 10px 10px 0;  
+  padding: 10px;
+  cursor: pointer;
+}
+
+.signin-container >button:hover{
+  background-color: rgb(1, 146, 32);
+  color: rgb(255, 255, 255);
+}
+
+.invalidUser {
+  color: red;
+}
+
+@media screen and (max-width: 300px) {
+  .signin-container{
+    display: block;
+    float: none;
+  }
+}
+
+/* SIGNIN - SIGNUP ENDS  */
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* SIGN-OUT BUTTON STARTS */
+
+.signOutButton{
+  position: fixed;
+  left: 72%;
+  border: none;
+  height: 40px;
+  width: 100px;
+  background-color: rgb(151, 151, 151);
+  color: black;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.signOutButton:hover{
+  background-color: gray;
+}
+
+@media (max-width: 800px){
+  .signOutButton{
+    top: 12%;
+    left: 85%;
+    height: 2.5em;
+  width: 6em;
+  }
+}
+
+/* SIGN-OUT BUTTON ENDS */
+
+.username {
+  text-transform: capitalize;
+  color:rgb(8, 121, 8);
+  font-size: 2rem;
+  padding: 0 1%;
+  float: left;
+}
+
+.yourblog {
+  padding: 1% 0 0 1%;
+  color: rgb(0, 12, 173) ;
+  font-size: 1.5rem;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> *
+
+/* ERROR PAGE STARTS*/
+
+.Error-container {
+  font-size: 0.5in;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10%;
+  height: 95.5vh;
+  /* border: 1px solid black; */
+}
+
+.error-box {
+  
+  border-radius: 40px;
+  border: 10px solid black;
+  padding: 5% 10%;
+  
+}
+
+.err-signin-signup {
+  font-size: 17px;
+  border: none;
+  color: black;
+  margin: 4% 10%;
+  background-color: rgb(43, 226, 104);
+  height: 5vh;
+  width: 10vh;
+  border-radius: 6px;
+}
+
+.err-signin-signup:hover {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color:rgb(37, 163, 79) ;
+}
+
+
+/* ERROR PAGE ENDS*/
